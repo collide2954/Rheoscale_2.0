@@ -118,7 +118,8 @@ def main():
     print(config)
     if config.input_file_name is None:
         raise ValueError('For CLI you must have a file that you can upload to the config must have --input_file_name')
-    RheoscaleRunner(config)
+    runner = RheoscaleRunner(config)
+    runner.run()
 
 
 if __name__ == "__main__":

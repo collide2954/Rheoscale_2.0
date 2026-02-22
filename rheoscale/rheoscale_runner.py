@@ -127,7 +127,10 @@ class RheoscaleRunner:
 
         #add one for the final edge
         if self.running_config.dead_extremum == 'Min':
-            dead = np.linspace(start=self.running_config._true_min, stop=bins_size+self.running_config.min_val, num=1)
+            if self.running_config._true_min > self.running_config.min_val:
+                dead = np.linspace(start=self.running_config.min_val, stop=bins_size+self.running_config.min_val, num=1)
+            else:
+                dead = np.linspace(start=self.running_config._true_min, stop=bins_size+self.running_config.min_val, num=1)
             remaining= np.linspace(start=bins_size+self.running_config.min_val, stop=self.running_config.max_val, num=self.running_config.number_of_bins)
             dead_value = dead[0]
             #if dead_value != self.running_config.min_val:
