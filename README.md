@@ -43,6 +43,8 @@ Reference: Page, B. M., T. A. Martin, C. L. Wright, L. A. Fenton, M. T. Villar, 
 >>Enhancing: At least 80% of substitutions enhance the measured parameter relative to the upper limit of the neutral bin.
 Reference: Sreenivasan, S., Fontes, J. D., and Swint-Kruse, L. 2025. 'Dissecting the effects of single amino acid substitutions in SARS-CoV-2 Mpro', Protein Science 34, e70225.
 
+>>Assignment warning flags.  Assignments will be flagged when positions are close to the thresholds for moderate, adverse, or WT/Inactive split.  In these cases, manual inspection of the position's histogram is needed to determine the best position class.
+
 
 #### Guidelines for histogram analyses: 
 a) For linear-scale data that spans 1 order of magnitude, histogram bins should be calculated using non-transformed (linear) calculations.  If a data set covers more than two orders of magnitude, it should be converted to a log scale. Any functional  value that has already been converted to a log scale (e.g., Gibbs free energy) or doesn't cover more than two orders of magnitude (e.g., Hill number) should not be converted. A data set that spans between 1 and 2 orders of magnitude should be carefully considered to determine whether a log scale is appropriate or not.  Note that most high-throughput data (e.g., "deep mutational scanning") are already reported in log scale, and should not be converted.
