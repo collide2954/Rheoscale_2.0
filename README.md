@@ -10,7 +10,7 @@ Hodges, A. M., A. W. Fenton, L. L. Dougherty, A. C. Overholt, and L. Swint-Kruse
 ## Usage/Quick Start
 
 Rheoscale2.0 has been implemented 3 different formats. 
-1. As a Python Package (this github site)
+1. As a Python Package (highly recommened; this github site)
 2. As a Command line interface (CLI; this github site)
 3. As an Excel workbook, which can be downloaded at https://github.com/liskinsk/RheoScale-calculator
 
@@ -92,7 +92,7 @@ python pip install rheoscale
 ```
 This installs rheoscale, making it available for use in any Python script via import rheoscale
 
-#### To install the Python version for CLI use OR in a editible script
+#### To install the Python version for CLI use OR in an editable  script
 Clone this repo using git (if you need to intall git on your machine go here: https://git-scm.com/)  
 then run:
 ```bash 

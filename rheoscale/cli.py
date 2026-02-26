@@ -4,6 +4,7 @@ from rheoscale.config import RheoscaleConfig
 from rheoscale.rheoscale_runner import RheoscaleRunner
 
 
+#this is the cli version of the script
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="rheoscale",
