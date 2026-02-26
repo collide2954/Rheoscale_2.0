@@ -85,16 +85,32 @@ pip install pandas numpy matplotlib
 ```
 That’s all the setup you need !!
 
-
-
 ### To install RheoScale2.0
-to install Python version run
+#### To install the Python version as a package run (recommended)
 ```bash
 python pip install rheoscale
 ```
 This installs rheoscale, making it available for use in any Python script via import rheoscale
 
+#### To install the Python version for CLI use OR in a editible script
+Clone this repo using git (if you need to intall git on your machine go here: https://git-scm.com/)  
+then run:
+```bash 
+git clone https://github.com/CarterG-17/Rheoscale_2.0.git
+```
+This will install and create a new folder named "Rheoscale_2.0" with all the files found in this repository.   
+run: 
+```bash 
+cd Rheoscale_2.0
+```
+Then you will need to install rheoscale into python using these files.  
+In the newly created "Rheoscale_2.0" folder run:
+```bash 
+python -m pip -e .
+```
+Now you should be able to use the python CLI interface or make changes to the Rheoscale calculator if you wish to, using this locally installed package.
 
+## RheoScale_2.0 Usage
 ### Python Package
 
 ```python 
