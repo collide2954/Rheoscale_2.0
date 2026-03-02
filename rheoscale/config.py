@@ -144,8 +144,8 @@ class RheoscaleConfig:
                 print(rf'attempting to create dir: {self.output_dir}\{self.protein_name}_Rheoscale')
                 os.makedirs((out_dir / f'{self.protein_name}_Rheoscale'))
                 
-            except:
-                print(rf'file: {self.output_dir}\{self.protein_name}_Rheoscale aready exists please move dir or delete or rerun with new name')    
+            except OSError:
+                print(rf'file: {self.output_dir}\{self.protein_name}_Rheoscale aready exists please move dir or delete or rerun with new name')
 
     def change_colums(self, **updates: str) -> "RheoscaleConfig":
         new_cols = dict(self.columns)
