@@ -18,7 +18,7 @@ def widget_for_field(f: Field, value: Any):
         else: 
             value = 1
         widget =  widgets.Dropdown(
-            options=[('Ture', 1), ('False', 2)],
+            options=[('True', 1), ('False', 2)],
             value=value
         )
 
