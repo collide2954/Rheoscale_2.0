@@ -1,5 +1,5 @@
 import numpy as np
-from typing import NamedTuple, Union
+from typing import NamedTuple
 from dataclasses import dataclass, fields
 
 class HistogramData(NamedTuple):
@@ -69,9 +69,9 @@ class RheoScores:
             if value not in ['neutral', 'toggle', 'rheostat', 'enhancing', 'adverse', 'WT/inactive','moderate', None, 'unclassified']:
                 raise TypeError(f'{name} must be a name of a position type')
         elif name in {"binary"}:
-            if not isinstance(value, Union[None, bool]):
+            if value is not None and not isinstance(value, bool):
                 raise TypeError(f"{name} must be bool")
-        elif not isinstance(value, Union[None, int, float, HistogramData]):
+        elif value is not None and not isinstance(value, (int, float, HistogramData)):
             raise TypeError(f"{name} must be numeric")
         
         
