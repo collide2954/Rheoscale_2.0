@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
 
 from .data_structures import HistogramData
 import matplotlib
@@ -31,7 +32,7 @@ def make_tuning_plot_one_pos(hist_data: HistogramData , dead_extremum, WT_value,
     label_precision: int = 2):
         
         counts = hist_data.counts
-        bin_edges = hist_data.bin_edges
+        bin_edges = hist_data.bin_edges.copy()
 
         # ---- sanity check ----
         if len(bin_edges) != len(counts) + 1:
@@ -94,7 +95,7 @@ def make_tuning_plot_one_pos(hist_data: HistogramData , dead_extremum, WT_value,
             #ax.set_yscale("log")
 
         fig.tight_layout()
-        plt.savefig(rf'{path}\{tle}.png')
+        plt.savefig(Path(path) / f'{tle}.png')
         
         plt.close()
 
