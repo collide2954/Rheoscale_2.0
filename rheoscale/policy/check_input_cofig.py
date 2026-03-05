@@ -116,7 +116,7 @@ def infer_WT(raw_DMS_data: pd.DataFrame, config: RheoscaleConfig,  update: dict)
     
     else:
         WT_val =  config.WT_val
-        if config.WT_name in raw_DMS_data[config.columns['position']].to_list():
+        if WT_name in raw_DMS_data[config.columns['position']].to_list():
            mask = raw_DMS_data[config.columns['position']] == WT_name
            raw_DMS_data.drop(raw_DMS_data[mask].index, inplace=True) 
 
