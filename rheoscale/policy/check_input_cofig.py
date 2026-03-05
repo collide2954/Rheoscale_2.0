@@ -82,8 +82,8 @@ def infer_error_val(raw_DMS_data: pd.DataFrame, config:RheoscaleConfig,update:di
     for i in range(len(error_list)):
         if error_list[i] == 0:
             error_list[i] = float(0)
-        elif type(error_list[i]) is not float :
-            raise
+        elif type(error_list[i]) is not float:
+            raise TypeError(f"Error value at index {i} must be a float, got {type(error_list[i]).__name__}: {error_list[i]}")
         
     avg_error =  (sum(error_list))/(len(error_list))
     two_sigma_error = avg_error*2
