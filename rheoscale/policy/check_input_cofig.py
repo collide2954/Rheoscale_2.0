@@ -34,9 +34,15 @@ def check_and_update_config(input_config: RheoscaleConfig, raw_DMS_data: pd.Data
     infer_WT(raw_DMS_data, input_config, update)
     
     if input_config.WT_val is not None:
-        update['WT_val']  = input_config.WT_val
+        if input_config.log_scale:
+            update['WT_val'] = np.log10(input_config.WT_val)
+        else:
+            update['WT_val'] = input_config.WT_val
     if input_config.WT_error is not None:
-        update['WT_error'] = input_config.WT_error
+        if input_config.log_scale:
+            update['WT_error'] = 0.434 * (input_config.WT_error / input_config.WT_val)
+        else:
+            update['WT_error'] = input_config.WT_error
 
 
     infer_neutral_bin_size(update, input_config.log_scale, input_config.error_val)
