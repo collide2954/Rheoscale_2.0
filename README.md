@@ -257,6 +257,25 @@ a configuration from the first step
 if an input file is not given in the pandas DataFrame then a data frame can be added here
 
 
+## Testing
+
+Install test dependencies:
+```bash
+pip install -e ".[test]"
+```
+
+Run the test suite:
+```bash
+pytest
+```
+
+Run with coverage reporting:
+```bash
+pytest --cov=rheoscale --cov-report=term-missing
+```
+
+Tests cover configuration validation, data structures, input inference, scoring calculations, and position assignment logic.
+
 ## License
 
 This package is under a GNU AFFERO GENERAL PUBLIC LICENSE
